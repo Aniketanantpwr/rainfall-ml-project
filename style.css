@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(239, 235, 241);
+  font-family: "Helvetica";
+  text-align: center;
+}
+
+h2 {
+  font-family: Candara;
+  font-size: 60px;
+  text-align: center;
+}
+
+form {
+  background-color: rgb(207, 192, 240);
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 30px;
+  margin-bottom: 250px;
+  width: 1500px;
+  height: 1150px;
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  box-shadow: 20px 20px 10px lightblue;
+  border-radius: 50px
+}
+
+label {
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+input {
+  font-size: 25px
+}
+
+select {
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  font-size: 25px;
+  margin-right: 100px;
+}
+
+#selectNumber {
+  margin-right: auto;
+  margin-right: 700px;
+}
+
+.date {
+  font-size: 25px;
+  width: 250px;
+  margin-right: 700px;
+}
+
+.submit {
+  font-size: 25px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.footer {
+  text-align: center;
+}

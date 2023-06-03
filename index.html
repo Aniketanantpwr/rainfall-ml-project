@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>Rainfall Prediction</title>
+  </head>
+  <body>
+    <h2>Rainfall Prediction</h2>
+    <form action="/submit" method="post">
+      <label for="lname">Enter date:</label>
+      <input type="date" name="date" class="date" /><br />
+      
+      <label>Location:</label>
+      <select id="selectNumber" , name="location">
+        <option>Choose a location</option>
+      </select><br>
+
+
+      <br /><label for="mintemp">Min Temperature:</label>
+      <input type="float" id="mintemp" name="mintemp" />
+
+      <label for="maxtemp">Max Temperature:</label>
+      <input type="float" id="maxtemp" name="maxtemp" /><br /><br />
+
+      <label for="Rainfall">Rainfall:</label>
+      <input type="float" id="Rainfall" name="Rainfall" />
+
+      <label for="Evaporation">Evaporation:</label>
+      <input type="float" id="Evaporation" name="Evaporation" /><br /><br />
+
+      <label for="Sunshine">Sunshine:</label>
+      <input type="float" id="Sunshine" name="Sunshine" />
+
+      <label for="WindGuestSpeed">Wind Guest Speed:</label>
+      <input
+        type="float"
+        id="WindGuestSpeed"
+        name="WindGuestSpeed"
+      /><br /><br />
+
+      <label for="WindSpeed9am">Wind Speed 9am:</label>
+      <input type="float" id="WindSpeed9am" name="WindSpeed9am" />
+
+      <label for="WindSpeed3am">Wind Speed 3am:</label>
+      <input type="float" id="WindSpeed3am" name="WindSpeed3am" /><br /><br />
+
+      <label for="Humidity9am">Humidity 9am:</label>
+      <input type="float" id="Humidity9am" name="Humidity9am" />
+
+      <label for="Humidity3am">Humidity 3am:</label>
+      <input type="float" id="Humidity3am" name="Humidity3am" /><br /><br />
+
+      <label for="Pressure9am">Pressure 9am:</label>
+      <input type="float" id="Pressure9am" name="Pressure9am" />
+
+      <label for="Pressure3am">Pressure 3am:</label>
+      <input type="float" id="Pressure3am" name="Pressure3am" /><br /><br />
+
+      <label for="Cloud9am">Cloud 9am:</label>
+      <input type="float" id="Cloud9am" name="Cloud9am" />
+
+      <label for="Cloud3am">Cloud 3am:</label>
+      <input type="float" id="Cloud3am" name="Cloud3am" /><br /><br />
+
+      <label for="Temperature9am">Temperature 9am:</label>
+      <input type="float" id="Temperature9am" name="Temperature9am" />
+
+      <label for="Temperature3am">Temperature 3am:</label>
+      <input type="float" id="Temperature3am" name="Temperature3am" /><br />
+
+      <label for="raintoday">rain today:</label>
+      <select id="yesno" , name="raintoday">
+        <option>Choose any</option>
+      </select>
+      <br /><br />
+
+      <input class="submit" type="submit" value="Submit" />
+      <input class="submit" type="RESET" value="Reset" />
+    </form>
+    <footer class="footer">
+      <p>Created by Aniket Pawar and Tejas Bavadhane</p>
+      <p>Machine Learning Project Submission</p>
+  </body>
+  <script>
+    var myArray = new Array(
+      "Albury",
+      "BadgerysCreek",
+      "Cobar",
+      "CoffsHarbour",
+      "Moree",
+      "Newcastle",
+      "NorahHead",
+      "NorfolkIsland",
+      "Penrith",
+      "Richmond",
+      "Sydney",
+      "SydneyAirport",
+      "WaggaWagga",
+      "Williamtown",
+      "Wollongong",
+      "Canberra",
+      "Tuggeranong",
+      "MountGinini",
+      "Ballarat",
+      "Bendigo",
+      "Sale",
+      "MelbourneAirport",
+      "Melbourne",
+      "Mildura",
+      "Nhil",
+      "Portland",
+      "Watsonia",
+      "Dartmoor",
+      "Brisbane",
+      "Cairns",
+      "GoldCoast",
+      "Townsville",
+      "Adelaide",
+      "MountGambier",
+      "Nuriootpa",
+      "Woomera",
+      "Albany",
+      "Witchcliffe",
+      "PearceRAAF",
+      "PerthAirport",
+      "Perth",
+      "SalmonGums",
+      "Walpole",
+      "Hobart",
+      "Launceston",
+      "AliceSprings",
+      "Darwin",
+      "Katherine",
+      "Uluru"
+    );
+
+    // Get dropdown element from DOM
+    var dropdown = document.getElementById("selectNumber");
+
+    // Loop through the array
+    for (var i = 0; i < myArray.length; ++i) {
+      // Append the element to the end of Array list
+      dropdown[dropdown.length] = new Option(myArray[i], myArray[i]);
+    }
+
+    var myArray1 = new Array("Yes", "No");
+    var dropdown = document.getElementById("yesno");
+
+    // Loop through the array
+    for (var i = 0; i < myArray1.length; ++i) {
+      // Append the element to the end of Array list
+      dropdown[dropdown.length] = new Option(myArray1[i], myArray1[i]);
+    }
+
+    var n1 = document.getElementById("mintemp");
+    var n2 = document.getElementById("maxtemp");
+
+    document.getElementById("mySubmit").addEventListener("click", function () {
+      res.value = new array(parseInt(n1.value), parseInt(n2.value));
+    });
+  </script>
+</html>
