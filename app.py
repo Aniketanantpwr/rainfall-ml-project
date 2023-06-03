@@ -13,7 +13,7 @@ def hello_world():
     return render_template('index.html')
     # return 'Hello, World!'
 
-@app.route('/submit',methods=['GET', 'POST'])
+@app.route('submit',methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
         Location = request.form["location"]
